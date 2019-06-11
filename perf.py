@@ -35,7 +35,7 @@ def perf(types):
         for i in range(0, options.count):
             elapsed = globals()[perf_func_name]()
             total_elapsed += elapsed
-        print_flush('{}: {}s'.format(typeName, total_elapsed / options.count))
+        print_flush('RESULT {}: {}s'.format(typeName, total_elapsed / options.count))
 
 if __name__ == '__main__':
 
@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     parser.add_option("-s", "--server", default = None,
         action = "store", dest = "server",
-        help = "Mantis SOAP server")
+        help = "Mantis server")
 
     parser.add_option("-u", "--username", default = None,
         action = "store", dest = "username",
